@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { MessageCircle, Menu, X } from 'lucide-react'
 
@@ -48,8 +49,11 @@ const Header = () => {
               <MessageCircle className="w-4 h-4 mr-2" />
               Ask Krishify AI
             </Button>
-            <Button variant="hero" size="sm">
-              Get Started
+            <Button variant="outline" size="sm" asChild>
+              <Link to="/login">Login</Link>
+            </Button>
+            <Button variant="hero" size="sm" asChild>
+              <Link to="/signup">Sign Up</Link>
             </Button>
           </div>
 
@@ -85,8 +89,11 @@ const Header = () => {
                   <MessageCircle className="w-4 h-4 mr-2" />
                   Ask Krishify AI
                 </Button>
-                <Button variant="hero" size="sm" className="w-full">
-                  Get Started
+                <Button variant="outline" size="sm" className="w-full" asChild>
+                  <Link to="/login">Login</Link>
+                </Button>
+                <Button variant="hero" size="sm" className="w-full" asChild>
+                  <Link to="/signup">Sign Up</Link>
                 </Button>
               </div>
             </nav>
